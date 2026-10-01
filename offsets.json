@@ -1,0 +1,1341 @@
+{
+  "timestamp": "2026-10-01 09:49:47",
+  "game": "Left 4 Dead 2",
+  "arch": "x86",
+  "dumper_version": 11,
+  "schema_version": 5,
+  "address_scope": "process_snapshot",
+  "module_builds": {
+    "client.dll": { "base": 1569062912, "size": 9842688, "pe_timestamp": 1782845135, "image_size": 9842688, "checksum": 0 },
+    "engine.dll": { "base": 1896218624, "size": 7598080, "pe_timestamp": 1782845142, "image_size": 7598080, "checksum": 4845376 },
+    "left4dead2.exe": { "base": 3014656, "size": 385024, "pe_timestamp": 1729294129, "image_size": 385024, "checksum": 399041 },
+    "materialsystem.dll": { "base": 1955069952, "size": 1298432, "pe_timestamp": 1782844863, "image_size": 1298432, "checksum": 1131498 },
+    "server.dll": { "base": 1559035904, "size": 9969664, "pe_timestamp": 1782845011, "image_size": 9969664, "checksum": 9130602 },
+    "studiorender.dll": { "base": 1948581888, "size": 4534272, "pe_timestamp": 1782844886, "image_size": 4534272, "checksum": 647198 },
+    "vphysics.dll": { "base": 1928331264, "size": 1789952, "pe_timestamp": 1782844872, "image_size": 1789952, "checksum": 1698098 }
+  },
+  "reference_fingerprints": {
+    "vphysics.dll": "C:\\Users\\chris\\Desktop\\New line\\Nulvex L4D2\\dump\\vphysics_dump.dll|1761280:134353352782933040",
+    "materialsystem.dll": "C:\\Users\\chris\\Desktop\\New line\\Nulvex L4D2\\dump\\materialsystem_dump.dll|1272832:134350224765559174"
+  },
+  "offsets": {
+    "client.dll": {
+      "dwBase": {
+        "absolute": 1569062912,
+        "value": 1569062912,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 9842688,
+        "value": 9842688,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      },
+      "dwEntityList": {
+        "absolute": 1576707444,
+        "value": 1576707444,
+        "kind": "module_address",
+        "rva": 7644532,
+        "confidence": "exact_interface",
+        "comment": "VClientEntityList003 interface ptr"
+      },
+      "dwClientDll": {
+        "absolute": 1576159896,
+        "value": 1576159896,
+        "kind": "module_address",
+        "rva": 7096984,
+        "confidence": "exact_interface",
+        "comment": "VClient016 interface ptr"
+      },
+      "dwGetAllClasses": {
+        "absolute": 1569753664,
+        "value": 1569753664,
+        "kind": "module_address",
+        "rva": 690752,
+        "confidence": "runtime_validated",
+        "comment": "selected after full ClientClass traversal"
+      },
+      "nClient_GetAllClasses": {
+        "absolute": 7,
+        "value": 7,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "selected after full ClientClass traversal"
+      },
+      "dwClientClassHead": {
+        "absolute": 1576641748,
+        "value": 1576641748,
+        "kind": "module_address",
+        "rva": 7578836,
+        "confidence": "runtime_validated",
+        "comment": "ClientClass linked list"
+      },
+      "dwEntityArrayOffset": {
+        "absolute": 4294901744,
+        "value": 4294901744,
+        "kind": "scalar",
+        "signed": -65552,
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "probe confirmed (internal disasm match)"
+      },
+      "nEntityStride": {
+        "absolute": 16,
+        "value": 16,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CEntInfo: IHandleEntity*(+0) serial(+4) prev(+8) next(+C) = 16 bytes"
+      },
+      "nEntList_GetClientEntity": {
+        "absolute": 3,
+        "value": 3,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "exact_interface",
+        "comment": "vtable index"
+      },
+      "nEntity_IClientNetworkable": {
+        "absolute": 8,
+        "value": 8,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "MSVC MI: IClientUnknown(+0) IClientRenderable(+4) IClientNetworkable(+8)"
+      },
+      "nNetworkable_GetClientClass": {
+        "absolute": 2,
+        "value": 2,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "IClientNetworkable vtbl: GetIClientUnknown(0) Release(1) GetClientClass(2)"
+      },
+      "kNumEntEntries": {
+        "absolute": 4096,
+        "value": 4096,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "NUM_ENT_ENTRIES from public/const.h (NUM_ENT_ENTRY_BITS=12)"
+      },
+      "kMaxEdicts": {
+        "absolute": 2048,
+        "value": 2048,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "MAX_EDICTS from public/const.h (MAX_EDICT_BITS=11)"
+      },
+      "kBaseShift": {
+        "absolute": 0,
+        "value": 0,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "probe validated (score=16140, teams=26, hp=6, origins=178, 346 entities)"
+      },
+      "kRenderable_GetModel": {
+        "absolute": 8,
+        "value": 8,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "probe validated model and version 49 studio header"
+      },
+      "kRenderable_SetupBones": {
+        "absolute": 13,
+        "value": 13,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "probe checked head matrix near sample survivor origin"
+      },
+      "kModelInfo_GetModelExtraData": {
+        "absolute": 11,
+        "value": 11,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "probe validated studiohdr_t and bone hierarchy"
+      },
+      "kSampleSurvivorHeadBoneIndex": {
+        "absolute": 17,
+        "value": 17,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "sample model survivors/survivor_coach.mdl; resolve by name for each model"
+      },
+      "kSampleSurvivorBoneCount": {
+        "absolute": 81,
+        "value": 81,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "sample model survivors/survivor_coach.mdl; from validated studiohdr_t"
+      }
+    },
+    "d3d9.dll": {
+      "dwBase": {
+        "absolute": 1923678208,
+        "value": 1923678208,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 1511424,
+        "value": 1511424,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      },
+      "nReset": {
+        "absolute": 16,
+        "value": 16,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "IDirect3DDevice9::Reset vtable index"
+      },
+      "nPresent": {
+        "absolute": 17,
+        "value": 17,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "IDirect3DDevice9::Present vtable index"
+      },
+      "nEndScene": {
+        "absolute": 42,
+        "value": 42,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "IDirect3DDevice9::EndScene vtable index"
+      },
+      "nDrawIndexedPrimitive": {
+        "absolute": 82,
+        "value": 82,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "IDirect3DDevice9 COM vtable index"
+      }
+    },
+    "engine.dll": {
+      "dwBase": {
+        "absolute": 1896218624,
+        "value": 1896218624,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 7598080,
+        "value": 7598080,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      },
+      "ptrSignonState": {
+        "absolute": 253821056,
+        "value": 253821056,
+        "kind": "process_address",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "IN GAME (>=6)"
+      },
+      "ptrClientState": {
+        "absolute": 253820952,
+        "value": 253820952,
+        "kind": "process_address",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "CClientState heap ptr (signon confirmed)"
+      },
+      "dwLocalPlayer_LEGACY": {
+        "absolute": 1900609464,
+        "value": 1900609464,
+        "kind": "module_address",
+        "rva": 4390840,
+        "confidence": "unreliable",
+        "comment": "vtbl[42] pattern (slot=2807 not in game?) [LEGACY: use ptrLocalPlayerSlot instead]"
+      },
+      "nLocalPlayerDeref": {
+        "absolute": 12,
+        "value": 12,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "unreliable",
+        "comment": "vtbl[42] operand; player-slot meaning requires cross-reference"
+      },
+      "ptrLocalPlayerSlot": {
+        "absolute": 253820992,
+        "value": 253820992,
+        "kind": "process_address",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "CClientState+0x28 = 1 (stable, heap-based)"
+      },
+      "nCsPlayerSlot": {
+        "absolute": 40,
+        "value": 40,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "runtime_validated",
+        "comment": "CClientState offset for m_nPlayerSlot"
+      },
+      "dwMaxClients": {
+        "absolute": 1900575936,
+        "value": 1900575936,
+        "kind": "module_address",
+        "rva": 4357312,
+        "confidence": "pattern_matched",
+        "comment": "ptr, not count"
+      },
+      "dwGlobalVars": {
+        "absolute": 1896605656,
+        "value": 1896605656,
+        "kind": "module_address",
+        "rva": 387032,
+        "confidence": "runtime_validated",
+        "comment": "CGlobalVarsBase* (struct scan)"
+      },
+      "dwViewMatrix": {
+        "absolute": 1902518172,
+        "value": 1902518172,
+        "kind": "module_address",
+        "rva": 6299548,
+        "confidence": "runtime_validated",
+        "comment": "VP matrix (view-projection)"
+      },
+      "dwRenderEngine": {
+        "absolute": 1900575680,
+        "value": 1900575680,
+        "kind": "module_address",
+        "rva": 4357056,
+        "confidence": "runtime_validated",
+        "comment": "render engine global ptr (VP matrix chain validated)"
+      },
+      "nVtblWorldToScreen": {
+        "absolute": 37,
+        "value": 37,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "exact_interface",
+        "comment": "vtbl[37] thunk -> render vtbl[13]"
+      },
+      "dwConVarHead": {
+        "absolute": 1900624808,
+        "value": 1900624808,
+        "kind": "module_address",
+        "rva": 4406184,
+        "confidence": "pattern_matched",
+        "comment": "ConVar linked list head"
+      },
+      "nVtblIsInGame": {
+        "absolute": 26,
+        "value": 26,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "exact_interface",
+        "comment": "VEngineClient vtable index"
+      },
+      "nVtblGetScreenSize": {
+        "absolute": 5,
+        "value": 5,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "exact_interface"
+      },
+      "nVtblGetMaxClients": {
+        "absolute": 43,
+        "value": 43,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "exact_interface",
+        "comment": "returns ptr, not count"
+      },
+      "nGV_realtime": {
+        "absolute": 0,
+        "value": 0,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::realtime (float)"
+      },
+      "nGV_framecount": {
+        "absolute": 4,
+        "value": 4,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::framecount (int)"
+      },
+      "nGV_absoluteframetime": {
+        "absolute": 8,
+        "value": 8,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::absoluteframetime (float)"
+      },
+      "nGV_curtime": {
+        "absolute": 12,
+        "value": 12,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::curtime (float)"
+      },
+      "nGV_frametime": {
+        "absolute": 16,
+        "value": 16,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::frametime (float)"
+      },
+      "nGV_maxClients": {
+        "absolute": 20,
+        "value": 20,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::maxClients (int)"
+      },
+      "nGV_tickcount": {
+        "absolute": 24,
+        "value": 24,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::tickcount (int)"
+      },
+      "nGV_interval_per_tick": {
+        "absolute": 28,
+        "value": 28,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::interval_per_tick (float)"
+      },
+      "nGV_interpolation_amount": {
+        "absolute": 32,
+        "value": 32,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::interpolation_amount (float)"
+      },
+      "nGV_simTicksThisFrame": {
+        "absolute": 36,
+        "value": 36,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::simTicksThisFrame (int)"
+      },
+      "nGV_network_protocol": {
+        "absolute": 40,
+        "value": 40,
+        "kind": "scalar",
+        "rva": 0,
+        "confidence": "source_verified",
+        "comment": "CGlobalVarsBase::network_protocol (int)"
+      }
+    },
+    "inputsystem.dll": {
+      "dwBase": {
+        "absolute": 1956380672,
+        "value": 1956380672,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 163840,
+        "value": 163840,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "left4dead2.exe": {
+      "dwBase": {
+        "absolute": 3014656,
+        "value": 3014656,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 385024,
+        "value": 385024,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "materialsystem.dll": {
+      "dwBase": {
+        "absolute": 1955069952,
+        "value": 1955069952,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 1298432,
+        "value": 1298432,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "server.dll": {
+      "dwBase": {
+        "absolute": 1559035904,
+        "value": 1559035904,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 9969664,
+        "value": 9969664,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "shaderapidx9.dll": {
+      "dwBase": {
+        "absolute": 1925251072,
+        "value": 1925251072,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 1044480,
+        "value": 1044480,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "studiorender.dll": {
+      "dwBase": {
+        "absolute": 1948581888,
+        "value": 1948581888,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 4534272,
+        "value": 4534272,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "tier0.dll": {
+      "dwBase": {
+        "absolute": 1957625856,
+        "value": 1957625856,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 507904,
+        "value": 507904,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "vguimatsurface.dll": {
+      "dwBase": {
+        "absolute": 1926758400,
+        "value": 1926758400,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 1515520,
+        "value": 1515520,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "vphysics.dll": {
+      "dwBase": {
+        "absolute": 1928331264,
+        "value": 1928331264,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 1789952,
+        "value": 1789952,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    },
+    "vstdlib.dll": {
+      "dwBase": {
+        "absolute": 1956970496,
+        "value": 1956970496,
+        "kind": "module_base",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module base address"
+      },
+      "dwSize": {
+        "absolute": 630784,
+        "value": 630784,
+        "kind": "module_size",
+        "rva": 0,
+        "confidence": "constant",
+        "comment": "module size"
+      }
+    }
+  },
+  "interfaces": {
+    "client.dll": {
+      "ClientAlphaPropertyMgrV001": 1576740804,
+      "ClientLeafSystem002": 1576740792,
+      "ClientRenderTargets001": 1577213560,
+      "GameClientExports001": 1576159836,
+      "GameMovement001": 1577204936,
+      "IEffects001": 1576227460,
+      "VCLIENTMATERIALSYSTEM001": 1576159932,
+      "VCLIENTTOOLS001": 1577266704,
+      "VClient016": 1576159896,
+      "VClientDllSharedAppSystems001": 1576159840,
+      "VClientEntityList003": 1576707444,
+      "VClientPrediction001": 1577135640,
+      "VParticleSystemQuery001": 1576239144
+    },
+    "engine.dll": {
+      "BlackBoxVersion001": 1900586416,
+      "EngineTraceClient003": 1900608092,
+      "EngineTraceServer003": 1900608064,
+      "GAMEEVENTSMANAGER001": 1900609000,
+      "GAMEEVENTSMANAGER002": 1903121408,
+      "GameServerData001": 1900585432,
+      "IEngineSoundClient003": 1900556488,
+      "IEngineSoundServer003": 1900556640,
+      "INETSUPPORT_001": 1900619028,
+      "ISERVERPLUGINHELPERS001": 1900581880,
+      "ServerUploadGameStats001": 1900586136,
+      "SpatialPartition001": 1903256392,
+      "StaticPropMgrClient005": 1900622780,
+      "StaticPropMgrServer002": 1900622784,
+      "VCLIENTENGINETOOLS001": 1900627308,
+      "VCvarQuery001": 1900588404,
+      "VDebugOverlay003": 1900573936,
+      "VENGINETOOL003": 1900626528,
+      "VENGINETOOLFRAMEWORK003": 1900626528,
+      "VENGINE_GAMEUIFUNCS_VERSION005": 1900623716,
+      "VENGINE_HLDS_API_VERSION002": 1900623704,
+      "VENGINE_LAUNCHER_API_VERSION004": 1900623656,
+      "VEngineClient013": 1900565764,
+      "VEngineClientStringTable001": 1903245736,
+      "VEngineEffects001": 1900579660,
+      "VEngineModel016": 1902527048,
+      "VEngineRandom001": 1900621780,
+      "VEngineRenderView013": 1900580716,
+      "VEngineServer022": 1900586236,
+      "VEngineServerStringTable001": 1903245856,
+      "VEngineShadowMgr002": 1902684992,
+      "VEngineVGui001": 1900628808,
+      "VModelInfoClient004": 1900618312,
+      "VModelInfoServer002": 1900618308,
+      "VPhysicsDebugOverlay001": 1900573940,
+      "VProfExport001": 1900625368,
+      "VSERVERENGINETOOLS001": 1900627312,
+      "VTOOLFRAMEWORKVERSION002": 1900627248,
+      "VWorkshop001": 1903290864,
+      "VoiceServer002": 1900625336,
+      "XboxSystemInterface001": 1900626376
+    },
+    "inputsystem.dll": {
+      "InputSystemVersion001": 1956494928
+    },
+    "materialsystem.dll": {
+      "COLORCORRECTION_VERSION_1": 1956065308,
+      "MaterialSystemHardwareConfig013": 1926074544,
+      "ShaderDLL004": 0,
+      "ShaderSystem002": 1956086716,
+      "VEngineCvar007": 1957150928,
+      "VMaterialSystem080": 1956102776,
+      "VMaterialSystemConfig004": 1956067264,
+      "VMaterialSystemStub001": 1956085616
+    },
+    "server.dll": {
+      "BotManager001": 1566910916,
+      "GameMovement001": 1567739608,
+      "HLTVDirector001": 1567651176,
+      "IEffects001": 1566761060,
+      "PlayerInfoManager001": 1566910920,
+      "PlayerInfoManager002": 1566910912,
+      "PluginHelpersCheck001": 1566915060,
+      "ServerGameClients003": 1566827436,
+      "ServerGameDLL005": 1566827416,
+      "ServerGameEnts001": 1566827432,
+      "ServerGameTags001": 1567178144,
+      "VSERVERTOOLS001": 1567189512,
+      "VServerDllSharedAppSystems001": 1566827440
+    },
+    "studiorender.dll": {
+      "VStudioRender026": 1953001496
+    },
+    "vguimatsurface.dll": {
+      "VGUI_Surface031": 1927972192
+    },
+    "vphysics.dll": {
+      "Physics2 Disabler Interface v1": 0,
+      "Physics2 Interface v0.3": 0,
+      "Physics2 Interface v0.4": 0,
+      "Physics2 Interface v0.5": 0,
+      "VPhysics031": 1929892300,
+      "VPhysicsCollision007": 1929892428,
+      "VPhysicsSurfaceProps001": 1929952152
+    },
+    "vstdlib.dll": {
+      "VEngineCvar007": 1957150928,
+      "VProcessUtils001": 1957144288
+    }
+  },
+  "interface_rvas": {
+    "client.dll": {
+      "ClientAlphaPropertyMgrV001": 7677892,
+      "ClientLeafSystem002": 7677880,
+      "ClientRenderTargets001": 8150648,
+      "GameClientExports001": 7096924,
+      "GameMovement001": 8142024,
+      "IEffects001": 7164548,
+      "VCLIENTMATERIALSYSTEM001": 7097020,
+      "VCLIENTTOOLS001": 8203792,
+      "VClient016": 7096984,
+      "VClientDllSharedAppSystems001": 7096928,
+      "VClientEntityList003": 7644532,
+      "VClientPrediction001": 8072728,
+      "VParticleSystemQuery001": 7176232
+    },
+    "engine.dll": {
+      "BlackBoxVersion001": 4367792,
+      "EngineTraceClient003": 4389468,
+      "EngineTraceServer003": 4389440,
+      "GAMEEVENTSMANAGER001": 4390376,
+      "GAMEEVENTSMANAGER002": 6902784,
+      "GameServerData001": 4366808,
+      "IEngineSoundClient003": 4337864,
+      "IEngineSoundServer003": 4338016,
+      "INETSUPPORT_001": 4400404,
+      "ISERVERPLUGINHELPERS001": 4363256,
+      "ServerUploadGameStats001": 4367512,
+      "SpatialPartition001": 7037768,
+      "StaticPropMgrClient005": 4404156,
+      "StaticPropMgrServer002": 4404160,
+      "VCLIENTENGINETOOLS001": 4408684,
+      "VCvarQuery001": 4369780,
+      "VDebugOverlay003": 4355312,
+      "VENGINETOOL003": 4407904,
+      "VENGINETOOLFRAMEWORK003": 4407904,
+      "VENGINE_GAMEUIFUNCS_VERSION005": 4405092,
+      "VENGINE_HLDS_API_VERSION002": 4405080,
+      "VENGINE_LAUNCHER_API_VERSION004": 4405032,
+      "VEngineClient013": 4347140,
+      "VEngineClientStringTable001": 7027112,
+      "VEngineEffects001": 4361036,
+      "VEngineModel016": 6308424,
+      "VEngineRandom001": 4403156,
+      "VEngineRenderView013": 4362092,
+      "VEngineServer022": 4367612,
+      "VEngineServerStringTable001": 7027232,
+      "VEngineShadowMgr002": 6466368,
+      "VEngineVGui001": 4410184,
+      "VModelInfoClient004": 4399688,
+      "VModelInfoServer002": 4399684,
+      "VPhysicsDebugOverlay001": 4355316,
+      "VProfExport001": 4406744,
+      "VSERVERENGINETOOLS001": 4408688,
+      "VTOOLFRAMEWORKVERSION002": 4408624,
+      "VWorkshop001": 7072240,
+      "VoiceServer002": 4406712,
+      "XboxSystemInterface001": 4407752
+    },
+    "inputsystem.dll": {
+      "InputSystemVersion001": 114256
+    },
+    "materialsystem.dll": {
+      "COLORCORRECTION_VERSION_1": 995356,
+      "ShaderSystem002": 1016764,
+      "VMaterialSystem080": 1032824,
+      "VMaterialSystemConfig004": 997312,
+      "VMaterialSystemStub001": 1015664
+    },
+    "server.dll": {
+      "BotManager001": 7875012,
+      "GameMovement001": 8703704,
+      "HLTVDirector001": 8615272,
+      "IEffects001": 7725156,
+      "PlayerInfoManager001": 7875016,
+      "PlayerInfoManager002": 7875008,
+      "PluginHelpersCheck001": 7879156,
+      "ServerGameClients003": 7791532,
+      "ServerGameDLL005": 7791512,
+      "ServerGameEnts001": 7791528,
+      "ServerGameTags001": 8142240,
+      "VSERVERTOOLS001": 8153608,
+      "VServerDllSharedAppSystems001": 7791536
+    },
+    "studiorender.dll": {
+      "VStudioRender026": 4419608
+    },
+    "vguimatsurface.dll": {
+      "VGUI_Surface031": 1213792
+    },
+    "vphysics.dll": {
+      "VPhysics031": 1561036,
+      "VPhysicsCollision007": 1561164,
+      "VPhysicsSurfaceProps001": 1620888
+    },
+    "vstdlib.dll": {
+      "VEngineCvar007": 180432,
+      "VProcessUtils001": 173792
+    }
+  },
+  "netvars": {
+    "Boomer.m_Collision": { "scanner": 540, "entity": 540 },
+    "Boomer.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Boomer.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Boomer.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Boomer.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Boomer.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Boomer.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Boomer.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Boomer.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Boomer.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Boomer.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Boomer.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Boomer.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Boomer.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Boomer.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Boomer.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Boomer.moveparent": { "scanner": 308, "entity": 308 },
+    "CBaseCombatCharacter.m_Collision": { "scanner": 540, "entity": 540 },
+    "CBaseCombatCharacter.m_angRotation": { "scanner": 280, "entity": 280 },
+    "CBaseCombatCharacter.m_clrRender": { "scanner": 100, "entity": 100 },
+    "CBaseCombatCharacter.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "CBaseCombatCharacter.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "CBaseCombatCharacter.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "CBaseCombatCharacter.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "CBaseCombatCharacter.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "CBaseCombatCharacter.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "CBaseCombatCharacter.moveparent": { "scanner": 308, "entity": 308 },
+    "CBaseEntity.m_Collision": { "scanner": 540, "entity": 540 },
+    "CBaseEntity.m_angRotation": { "scanner": 280, "entity": 280 },
+    "CBaseEntity.m_clrRender": { "scanner": 100, "entity": 100 },
+    "CBaseEntity.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "CBaseEntity.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "CBaseEntity.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "CBaseEntity.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "CBaseEntity.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "CBaseEntity.moveparent": { "scanner": 308, "entity": 308 },
+    "CTerrorPlayer.m_Collision": { "scanner": 540, "entity": 540 },
+    "CTerrorPlayer.m_angRotation": { "scanner": 280, "entity": 280 },
+    "CTerrorPlayer.m_clrRender": { "scanner": 100, "entity": 100 },
+    "CTerrorPlayer.m_fFlags": { "scanner": 240, "entity": 240 },
+    "CTerrorPlayer.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "CTerrorPlayer.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "CTerrorPlayer.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "CTerrorPlayer.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "CTerrorPlayer.m_iHealth": { "scanner": 236, "entity": 236 },
+    "CTerrorPlayer.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "CTerrorPlayer.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "CTerrorPlayer.m_lifeState": { "scanner": 327, "entity": 327 },
+    "CTerrorPlayer.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "CTerrorPlayer.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "CTerrorPlayer.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "CTerrorPlayer.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "CTerrorPlayer.moveparent": { "scanner": 308, "entity": 308 },
+    "Charger.m_Collision": { "scanner": 540, "entity": 540 },
+    "Charger.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Charger.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Charger.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Charger.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Charger.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Charger.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Charger.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Charger.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Charger.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Charger.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Charger.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Charger.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Charger.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Charger.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Charger.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Charger.moveparent": { "scanner": 308, "entity": 308 },
+    "Hunter.m_Collision": { "scanner": 540, "entity": 540 },
+    "Hunter.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Hunter.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Hunter.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Hunter.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Hunter.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Hunter.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Hunter.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Hunter.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Hunter.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Hunter.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Hunter.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Hunter.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Hunter.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Hunter.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Hunter.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Hunter.moveparent": { "scanner": 308, "entity": 308 },
+    "Infected.m_Collision": { "scanner": 540, "entity": 540 },
+    "Infected.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Infected.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Infected.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Infected.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Infected.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Infected.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Infected.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Infected.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Infected.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Infected.moveparent": { "scanner": 308, "entity": 308 },
+    "Jockey.m_Collision": { "scanner": 540, "entity": 540 },
+    "Jockey.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Jockey.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Jockey.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Jockey.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Jockey.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Jockey.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Jockey.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Jockey.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Jockey.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Jockey.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Jockey.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Jockey.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Jockey.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Jockey.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Jockey.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Jockey.moveparent": { "scanner": 308, "entity": 308 },
+    "Smoker.m_Collision": { "scanner": 540, "entity": 540 },
+    "Smoker.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Smoker.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Smoker.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Smoker.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Smoker.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Smoker.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Smoker.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Smoker.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Smoker.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Smoker.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Smoker.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Smoker.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Smoker.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Smoker.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Smoker.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Smoker.moveparent": { "scanner": 308, "entity": 308 },
+    "Spitter.m_Collision": { "scanner": 540, "entity": 540 },
+    "Spitter.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Spitter.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Spitter.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Spitter.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Spitter.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Spitter.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Spitter.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Spitter.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Spitter.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Spitter.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Spitter.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Spitter.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Spitter.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Spitter.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Spitter.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Spitter.moveparent": { "scanner": 308, "entity": 308 },
+    "SurvivorBot.m_Collision": { "scanner": 540, "entity": 540 },
+    "SurvivorBot.m_angRotation": { "scanner": 280, "entity": 280 },
+    "SurvivorBot.m_clrRender": { "scanner": 100, "entity": 100 },
+    "SurvivorBot.m_fFlags": { "scanner": 240, "entity": 240 },
+    "SurvivorBot.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "SurvivorBot.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "SurvivorBot.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "SurvivorBot.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "SurvivorBot.m_iHealth": { "scanner": 236, "entity": 236 },
+    "SurvivorBot.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "SurvivorBot.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "SurvivorBot.m_lifeState": { "scanner": 327, "entity": 327 },
+    "SurvivorBot.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "SurvivorBot.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "SurvivorBot.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "SurvivorBot.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "SurvivorBot.moveparent": { "scanner": 308, "entity": 308 },
+    "Tank.m_Collision": { "scanner": 540, "entity": 540 },
+    "Tank.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Tank.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Tank.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Tank.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Tank.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Tank.m_hGroundEntity": { "scanner": 316, "entity": 316 },
+    "Tank.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Tank.m_iHealth": { "scanner": 236, "entity": 236 },
+    "Tank.m_iMaxHealth": { "scanner": 8156, "entity": 8156 },
+    "Tank.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Tank.m_lifeState": { "scanner": 327, "entity": 327 },
+    "Tank.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Tank.m_survivorCharacter": { "scanner": 7308, "entity": 7308 },
+    "Tank.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Tank.m_zombieClass": { "scanner": 7312, "entity": 7312 },
+    "Tank.moveparent": { "scanner": 308, "entity": 308 },
+    "Witch.m_Collision": { "scanner": 540, "entity": 540 },
+    "Witch.m_angRotation": { "scanner": 280, "entity": 280 },
+    "Witch.m_clrRender": { "scanner": 100, "entity": 100 },
+    "Witch.m_fFlags": { "scanner": 240, "entity": 240 },
+    "Witch.m_flSimulationTime": { "scanner": 336, "entity": 336 },
+    "Witch.m_hActiveWeapon": { "scanner": 4228, "entity": 4228 },
+    "Witch.m_hOwnerEntity": { "scanner": 312, "entity": 312 },
+    "Witch.m_iTeamNum": { "scanner": 228, "entity": 228 },
+    "Witch.m_nModelIndex": { "scanner": 320, "entity": 320 },
+    "Witch.m_vecOrigin": { "scanner": 292, "entity": 292 },
+    "Witch.moveparent": { "scanner": 308, "entity": 308 }
+  },
+  "netvar_ambiguities": {
+    "Boomer.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "CBaseCombatCharacter.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 }
+    ],
+    "CTerrorPlayer.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Charger.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Hunter.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Infected.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_InfectedAnimationLayer", "scanner": 28, "entity": 28 }
+    ],
+    "Jockey.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Smoker.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Spitter.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "SurvivorBot.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Tank.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_TerrorPlayer", "scanner": 2212, "entity": 2212 }
+    ],
+    "Witch.m_nSequence": [
+      { "table": "DT_Animationlayer", "scanner": 12, "entity": 12 },
+      { "table": "DT_BaseAnimating", "scanner": 2212, "entity": 2212 },
+      { "table": "DT_InfectedAnimationLayer", "scanner": 28, "entity": 28 }
+    ]
+  },
+  "game_state": {
+    "local_player": {
+      "slot": 1,
+      "validated": true,
+      "source": "client_state",
+      "client_state": 253820952,
+      "slot_offset": 40,
+      "slot_address": 253820992,
+      "legacy_candidate": { "slot": 2807, "global": 1900609464, "deref_offset": 12, "base_ptr": 1902537624, "cross_ref": false }
+    },
+    "curtime": 453.5462,
+    "frametime": 0.008028,
+    "tickcount": 13606
+  },
+  "entity_snapshot_source": "internal_probe",
+  "entities": [
+    { "slot": 0, "ptr": 85825536, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_World" },
+    { "slot": 1, "ptr": 845454512, "team": 2, "health": 1, "life_state": 0, "origin": [-3387.1, -4225.6, 0.0], "class": "C_TerrorPlayer" },
+    { "slot": 2, "ptr": 1255112768, "team": 2, "health": 71, "life_state": 0, "origin": [-3297.4, -4085.1, 0.0], "class": "C_SurvivorBot" },
+    { "slot": 3, "ptr": 1931313248, "team": 2, "health": 1, "life_state": 0, "origin": [-3423.0, -4050.5, 0.0], "class": "C_SurvivorBot" },
+    { "slot": 4, "ptr": 159270192, "team": 2, "health": 79, "life_state": 0, "origin": [-3262.6, -4203.0, 0.0], "class": "C_SurvivorBot" },
+    { "slot": 5, "ptr": 180152224, "team": 3, "health": 152, "life_state": 0, "origin": [-4709.4, -3055.5, 792.0], "class": "C_Smoker" },
+    { "slot": 7, "ptr": 852348560, "team": 3, "health": 100, "life_state": 0, "origin": [-3898.9, -3257.8, 0.0], "class": "C_Spitter" },
+    { "slot": 19, "ptr": 127915264, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_CSTeam" },
+    { "slot": 20, "ptr": 101010944, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_CSTeam" },
+    { "slot": 21, "ptr": 135404544, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_CSTeam" },
+    { "slot": 22, "ptr": 101405952, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_CSTeam" },
+    { "slot": 23, "ptr": 138211584, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_CSTeam" },
+    { "slot": 25, "ptr": 845465088, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_TerrorPlayerResource" },
+    { "slot": 26, "ptr": 110306048, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_VoteController" },
+    { "slot": 27, "ptr": 123740928, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "CTerrorGameRulesProxy" },
+    { "slot": 28, "ptr": 114493184, "team": 0, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_SceneEntity" },
+    { "slot": 30, "ptr": 171453184, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FirstAidKit" },
+    { "slot": 101, "ptr": 1227417008, "team": 3, "health": 0, "life_state": 0, "origin": [-3032.4, -4748.6, 13.1], "class": "C_Infected" },
+    { "slot": 105, "ptr": 1485413520, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_SpitterClaw" },
+    { "slot": 126, "ptr": 163846736, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_PainPills" },
+    { "slot": 133, "ptr": 1219926672, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_Rifle_AK47" },
+    { "slot": 134, "ptr": 1255123344, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_MagnumPistol" },
+    { "slot": 139, "ptr": 985236368, "team": 3, "health": 0, "life_state": 0, "origin": [-3067.2, -4434.0, 0.0], "class": "C_Infected" },
+    { "slot": 148, "ptr": 984539248, "team": 3, "health": 0, "life_state": 0, "origin": [-3003.1, -3341.4, 0.0], "class": "C_Infected" },
+    { "slot": 150, "ptr": 1177155152, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_Pistol" },
+    { "slot": 151, "ptr": 1498358704, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_Sniper_Military" },
+    { "slot": 155, "ptr": 180675296, "team": 3, "health": 0, "life_state": 0, "origin": [-3311.6, -3969.2, 0.0], "class": "C_Infected" },
+    { "slot": 185, "ptr": 938694224, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FirstAidKit" },
+    { "slot": 205, "ptr": 177722768, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FirstAidKit" },
+    { "slot": 242, "ptr": 163748736, "team": 3, "health": 0, "life_state": 0, "origin": [-3265.4, -4050.0, 0.0], "class": "C_Infected" },
+    { "slot": 244, "ptr": 1235931920, "team": 2, "health": 0, "life_state": 0, "origin": [-4523.7, -3498.7, 3.6], "class": "C_GasCan" },
+    { "slot": 245, "ptr": 1235935280, "team": 2, "health": 0, "life_state": 0, "origin": [-4601.8, -3445.0, 9.5], "class": "C_GasCan" },
+    { "slot": 246, "ptr": 1235938640, "team": 2, "health": 0, "life_state": 0, "origin": [-4392.0, -3753.7, 3.6], "class": "C_GasCan" },
+    { "slot": 248, "ptr": 851348864, "team": 2, "health": 0, "life_state": 0, "origin": [-3451.5, -3730.6, 3.5], "class": "C_GasCan" },
+    { "slot": 249, "ptr": 851352224, "team": 2, "health": 0, "life_state": 0, "origin": [-4247.4, -3724.4, 3.5], "class": "C_GasCan" },
+    { "slot": 250, "ptr": 851355584, "team": 2, "health": 0, "life_state": 0, "origin": [-4588.1, -3533.0, 9.6], "class": "C_GasCan" },
+    { "slot": 262, "ptr": 126923008, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 263, "ptr": 126915840, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 264, "ptr": 126917632, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 265, "ptr": 126910464, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 323, "ptr": 1236050304, "team": 2, "health": 0, "life_state": 0, "origin": [-4585.8, -3578.7, 9.4], "class": "C_GasCan" },
+    { "slot": 324, "ptr": 1236053664, "team": 2, "health": 0, "life_state": 0, "origin": [-4527.4, -3556.0, 3.4], "class": "C_GasCan" },
+    { "slot": 334, "ptr": 1219916208, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FirstAidKit" },
+    { "slot": 336, "ptr": 844571568, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_MagnumPistol" },
+    { "slot": 337, "ptr": 170841760, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_Rifle_SG552" },
+    { "slot": 342, "ptr": 1153147584, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_Pistol" },
+    { "slot": 343, "ptr": 866147696, "team": 2, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_Rifle_SG552" },
+    { "slot": 351, "ptr": 1449422288, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_SmokerClaw" },
+    { "slot": 364, "ptr": 126919424, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 365, "ptr": 138821632, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 366, "ptr": 138823424, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 367, "ptr": 138827008, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" },
+    { "slot": 368, "ptr": 138828800, "team": 3, "health": 0, "life_state": 0, "origin": [0.0, 0.0, 0.0], "class": "C_FuncSimpleLadder" }
+  ],
+  "validation": {
+    "physics_materials": { "live_valid": true, "module_count": 2 },
+    "sdk_inventory": { "valid": true, "class_count": 287, "property_count": 35774, "reason": "class chain, property counts, names, types, and offsets consistent" },
+    "trainer_layout": {
+      "probe_entities": 346,
+      "survivor_samples": 4,
+      "fields": [
+        { "class": "CTerrorPlayer", "property": "m_iTeamNum", "offset": 228, "samples": 4, "passed": 4, "validated": true, "evidence": "" },
+        { "class": "CTerrorPlayer", "property": "m_iHealth", "offset": 236, "samples": 4, "passed": 4, "validated": true, "evidence": "" },
+        { "class": "CTerrorPlayer", "property": "m_lifeState", "offset": 327, "samples": 4, "passed": 4, "validated": true, "evidence": "" },
+        { "class": "CTerrorPlayer", "property": "m_vecOrigin", "offset": 292, "samples": 4, "passed": 4, "validated": true, "evidence": "" },
+        { "class": "CTerrorPlayer", "property": "m_iMaxHealth", "offset": 8156, "samples": 4, "passed": 4, "validated": true, "evidence": "" },
+        { "class": "CTerrorPlayer", "property": "m_survivorCharacter", "offset": 7308, "samples": 4, "passed": 4, "validated": true, "evidence": "" },
+        { "class": "CTerrorPlayer", "property": "m_zombieClass", "offset": 7312, "samples": 2, "passed": 2, "validated": true, "evidence": "C_Smoker=1 (expected 1), C_Spitter=4 (expected 4)" }
+      ]
+    },
+    "entity_list": {
+      "resolved": true,
+      "array_offset": -65552,
+      "stride": 16,
+      "valid_slots": 46,
+      "confidence": "runtime_validated",
+      "candidates": [
+        { "offset": "0x178", "count": 18, "quality_score": 0 },
+        { "offset": "0x188", "count": 18, "quality_score": 0 },
+        { "offset": "0x1E8", "count": 18, "quality_score": 0 },
+        { "offset": "0x1D8", "count": 18, "quality_score": 0 },
+        { "offset": "0x1C8", "count": 18, "quality_score": 0 },
+        { "offset": "0x1B8", "count": 18, "quality_score": 0 },
+        { "offset": "0x1A8", "count": 18, "quality_score": 0 },
+        { "offset": "0x198", "count": 18, "quality_score": 0 },
+        { "offset": "0x168", "count": 18, "quality_score": 0 },
+        { "offset": "0x158", "count": 18, "quality_score": 0 }
+      ]
+    },
+    "base_shift": {
+      "value": 0,
+      "score": 45,
+      "second_best": 42,
+      "margin": 3,
+      "entities_tested": 16,
+      "confidence": "runtime_validated",
+      "candidates": [
+        { "shift": "0x0", "total_score": 720, "avg_score": 45 },
+        { "shift": "0x90", "total_score": 672, "avg_score": 42 },
+        { "shift": "0x80", "total_score": 452, "avg_score": 28 },
+        { "shift": "0x4", "total_score": 420, "avg_score": 26 },
+        { "shift": "0x88", "total_score": 377, "avg_score": 23 },
+        { "shift": "0x8C", "total_score": 272, "avg_score": 17 },
+        { "shift": "0x84", "total_score": 192, "avg_score": 12 },
+        { "shift": "0x8", "total_score": 142, "avg_score": 8 },
+        { "shift": "0x10", "total_score": 95, "avg_score": 5 }
+      ]
+    },
+    "signon_state": {
+      "value": 6,
+      "in_game": true
+    },
+    "view_matrix": {
+      "address": 1902518172,
+      "valid": true,
+      "confidence": "runtime_validated"
+    },
+    "bones": {
+      "probed": true,
+      "valid": true,
+      "probe_version": 6,
+      "probe_error": 0,
+      "sample_model": "survivors/survivor_coach.mdl",
+      "model_address": 4292998124,
+      "studio_header_address": 583335968,
+      "studio_version": 49,
+      "bone_count": 81,
+      "head_index": 17,
+      "get_model_vtable": 8,
+      "studio_getter_vtable": 11,
+      "setup_bones_vtable": 13,
+      "setup_bones_valid": true,
+      "sample_bones": [
+        { "index": 0, "name": "ValveBiped.Bip01_Pelvis", "parent": -1 },
+        { "index": 1, "name": "ValveBiped.Bip01_Spine", "parent": 0 },
+        { "index": 2, "name": "ValveBiped.Bip01_Spine1", "parent": 1 },
+        { "index": 3, "name": "ValveBiped.Bip01_Spine2", "parent": 2 }
+      ]
+    },
+    "source_verified": {
+      "reference": "nillerusr/source-engine (TF2 branch); cross-branch layout hints, not proof for this L4D2 build",
+      "CEntInfo": "IHandleEntity*(+0) serial(+4) prev(+8) next(+C) stride=16; compare validation.entity_list",
+      "CGlobalVarsBase": "realtime(+0) framecount(+4) absframetime(+8) curtime(+C) frametime(+10) maxClients(+14) tickcount(+18) iptick(+1C)",
+      "NUM_ENT_ENTRIES": "4096 (NUM_ENT_ENTRY_BITS=12)",
+      "MAX_EDICTS": "2048 (MAX_EDICT_BITS=11)",
+      "VClientEntityList003_GetClientEntity": "vtbl[3]; compared with loaded client code",
+      "IClientNetworkable_offset": "+8 from entity base (MSVC MI: IClientUnknown+0, IClientRenderable+4, IClientNetworkable+8)",
+      "IClientNetworkable_GetClientClass": "vtbl[2]",
+      "ClientClass_layout": "createFn(+0) createEventFn(+4) networkName(+8) recvTable(+C) next(+10) classID(+14)",
+      "D3D9_vtable": "Reset=16 Present=17 EndScene=42 DrawIndexedPrimitive=82",
+      "IVEngineClient_note": "L4D2 vtable indices differ from TF2 source (L4D2 adds ~30 methods). Binary-derived indices are authoritative.",
+      "CClientState_note": "L4D2 field order differs from TF2 source. Binary-validated offsets (+0x28=playerSlot, +0x68=signonState) are authoritative."
+    }
+  },
+  "aob_signatures": {
+    "client.dll": {
+      "aob_GetAllClasses": {
+        "address": 1569753664,
+        "pattern": "A1 ?? ?? ?? ?? C3 CC CC CC CC CC CC CC CC CC CC",
+        "raw_bytes": "A1 D4 A4 F9 5D C3 CC CC CC CC CC CC CC CC CC CC",
+        "ptr_offset": 1
+      },
+      "aob_GetClientEntity": {
+        "address": 1569820096,
+        "pattern": "55 8B EC 8B 45 08 85 C0 78 20 3D ?? ?? ?? ?? 7D 19 05 FF EF FF FF 03 C0 8B 0C C1 85 C9 74 0B 8B 01 8B 50 18 FF D2 5D C2 04 00 33 C0 5D C2 04 00",
+        "raw_bytes": "55 8B EC 8B 45 08 85 C0 78 20 3D 00 10 00 00 7D 19 05 FF EF FF FF 03 C0 8B 0C C1 85 C9 74 0B 8B 01 8B 50 18 FF D2 5D C2 04 00 33 C0 5D C2 04 00",
+        "ptr_offset": 11
+      }
+    },
+    "engine.dll": {
+      "aob_IsInGame_vtbl26": {
+        "address": 1896608160,
+        "pattern": "E8 ?? ?? ?? ?? 33 C9 83 78 68 06",
+        "raw_bytes": "E8 FB 3A 02 00 33 C9 83 78 68 06",
+        "ptr_offset": 1
+      },
+      "aob_GetClientState": {
+        "address": 1896754336,
+        "pattern": "A1 ?? ?? ?? ?? 83 C0 08 C3",
+        "raw_bytes": "A1 EC 68 48 71 83 C0 08 C3",
+        "ptr_offset": 1
+      },
+      "aob_GetLocalPlayer_vtbl42": {
+        "address": 1896601248,
+        "pattern": "A1 ?? ?? ?? ?? 8B 40 ?? C3",
+        "raw_bytes": "A1 B8 FF 48 71 8B 40 0C C3",
+        "ptr_offset": 1
+      },
+      "aob_GetMaxClients_vtbl43": {
+        "address": 1896601456,
+        "pattern": "A1 ?? ?? ?? ?? C3",
+        "raw_bytes": "A1 C0 7C 48 71 C3",
+        "ptr_offset": 1
+      },
+      "aob_GlobalVars": {
+        "address": 1896605654,
+        "pattern": "04 68 ?? ?? ?? ?? 52 FF D0 85",
+        "raw_bytes": "04 68 0C 66 48 71 52 FF D0 85",
+        "ptr_offset": 2
+      },
+      "aob_ViewMatrix_thunk": {
+        "address": 1896601120,
+        "pattern": "8B 0D ?? ?? ?? ?? 8B 01 8B 50 34 FF E2 CC",
+        "raw_bytes": "8B 0D C0 7B 48 71 8B 01 8B 50 34 FF E2 CC",
+        "ptr_offset": 2
+      },
+      "aob_ViewMatrix_target": {
+        "address": 1897017696,
+        "pattern": "83 B9 ?? ?? ?? ?? 01 7E 17 8B 81 E8 00 00 00 8B",
+        "raw_bytes": "83 B9 E8 00 00 00 01 7E 17 8B 81 E8 00 00 00 8B",
+        "ptr_offset": 2
+      },
+      "aob_ConVarHead": {
+        "address": 1896229945,
+        "pattern": "8B 0D ?? ?? ?? ?? 85 C9 74 ?? 8B 01 8B 50",
+        "raw_bytes": "8B 0D A8 3B 49 71 85 C9 74 18 8B 01 8B 50",
+        "ptr_offset": 2
+      }
+    }
+  }
+}
